@@ -30,6 +30,7 @@ return array(
     'CSPromo\\Core\\Admin\\Api\\TemplatesApi' => $baseDir . '/Core/Admin/Api/TemplatesApi.php',
     'CSPromo\\Core\\Admin\\Application' => $baseDir . '/Core/Admin/Application.php',
     'CSPromo\\Core\\Admin\\CurrentPromoPopup' => $baseDir . '/Core/Admin/CurrentPromoPopup.php',
+    'CSPromo\\Core\\Admin\\NotificationsManager' => $baseDir . '/Core/Admin/NotificationsManager.php',
     'CSPromo\\Core\\Admin\\Pages\\EmailListContactsPage' => $baseDir . '/Core/Admin/Pages/EmailListContactsPage.php',
     'CSPromo\\Core\\Admin\\Pages\\EmailLists' => $baseDir . '/Core/Admin/Pages/EmailLists.php',
     'CSPromo\\Core\\Admin\\Pages\\IntegrationsPage' => $baseDir . '/Core/Admin/Pages/IntegrationsPage.php',

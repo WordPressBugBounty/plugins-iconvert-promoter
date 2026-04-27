@@ -5,7 +5,7 @@ Tags: marketing, popup, ecommerce, lead-generation
 Requires at least: 6.5  
 Tested up to: 6.9  
 Requires PHP: 7.4  
-Stable tag: 1.0.2  
+Stable tag: 1.0.3  
 License: GPLv3 or later  
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html  
 
@@ -110,6 +110,9 @@ Yes, all popup templates are responsive and optimized for mobile devices.
 == Changelog ==
 
 📝 **Changelog:**  
+
+= 1.0.3 = 
+- Fixed minor UI issues.
 
 = 1.0.1 =  
 - Fixed an issue with Google Fonts not being properly loaded in some environments.

@@ -138,6 +138,7 @@ class ComposerStaticInitIconvertPromoter
         'CSPromo\\Core\\Admin\\Api\\TemplatesApi' => __DIR__ . '/../..' . '/Core/Admin/Api/TemplatesApi.php',
         'CSPromo\\Core\\Admin\\Application' => __DIR__ . '/../..' . '/Core/Admin/Application.php',
         'CSPromo\\Core\\Admin\\CurrentPromoPopup' => __DIR__ . '/../..' . '/Core/Admin/CurrentPromoPopup.php',
+        'CSPromo\\Core\\Admin\\NotificationsManager' => __DIR__ . '/../..' . '/Core/Admin/NotificationsManager.php',
         'CSPromo\\Core\\Admin\\Pages\\EmailListContactsPage' => __DIR__ . '/../..' . '/Core/Admin/Pages/EmailListContactsPage.php',
         'CSPromo\\Core\\Admin\\Pages\\EmailLists' => __DIR__ . '/../..' . '/Core/Admin/Pages/EmailLists.php',
         'CSPromo\\Core\\Admin\\Pages\\IntegrationsPage' => __DIR__ . '/../..' . '/Core/Admin/Pages/IntegrationsPage.php',

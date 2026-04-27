@@ -3,7 +3,7 @@
 /**
  * Plugin Name: iConvert Promoter
  * Description: A powerful and dynamic WordPress popup toolkit to grow your email list, retain customers, and boost conversions.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: ExtendThemes
  * Text Domain: iconvert-promoter
  * License: GPL-3.0+
@@ -19,6 +19,7 @@ use CSPromo\Core\Frontend\API\EmailListsAPI;
 use CSPromo\Core\PostTypes\PromoPopupsSetup;
 use CSPromo\Core\PostTypes\PromoPopupTemplate;
 use CSPromo\Core\Admin\Application as AdminApplication;
+use CSPromo\Core\Admin\NotificationsManager;
 use CSPromo\Core\Frontend\Actions\Ajax\AnalyticsAjaxActions;
 use CSPromo\Core\Frontend\Actions\Ajax\FrontendPromoLoadActions;
 
@@ -58,7 +59,7 @@ if ( defined( 'ICONVERTPR_VERSION' ) ) {
 	return;
 }
 
-define('ICONVERTPR_VERSION', '1.0.2');
+define('ICONVERTPR_VERSION', '1.0.3');
 
 
 $GLOBALS['iconvertpr_autoloader'] = require_once __DIR__ . '/vendor/autoload.php';
@@ -66,7 +67,7 @@ $GLOBALS['iconvertpr_autoloader'] = require_once __DIR__ . '/vendor/autoload.php
 define('ICONVERTPR_PATH', plugin_dir_path(__FILE__));
 define('ICONVERTPR_URL', plugin_dir_url(__FILE__));
 define('ICONVERTPR_PAGE_FILE', __FILE__);
-define('ICONVERTPR_BUILD_NUMBER', '32' );
+define('ICONVERTPR_BUILD_NUMBER', '36' );
 
 define('ICONVERTPR_PAGE_ID', 'iconvertpr-promoter');
 define('ICONVERTPR_PAGE_SUBSCRIBERS', 'iconvertpr-promoter-subscribers');
@@ -123,7 +124,7 @@ new CampaignsAPI();
 new AnalyticsAjaxActions();
 new FrontendPromoLoadActions();
 
-
+ NotificationsManager::load();
 
 if ( ! (defined( 'ICONVERTPR_SKIP_PRO' ) && ICONVERTPR_SKIP_PRO) && file_exists( ICONVERTPR_PATH . '/pro/index.php' ) ) {
 	require_once ICONVERTPR_PATH . '/pro/index.php';

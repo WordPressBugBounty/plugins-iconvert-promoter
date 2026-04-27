@@ -2,6 +2,7 @@
 namespace CSPromo\Core;
 
 use CSPromo\Core\PostTypes\PromoPopupsSetup;
+use KPromo\Flags;
 
 class Activation {
 
@@ -12,5 +13,16 @@ class Activation {
 	public function onActivate() {
 		PromoPopupsSetup::register();
 		flush_rewrite_rules();
+
+		$is_pro = strpos( ICONVERTPR_PAGE_FILE, 'iconvert-promoter-pro' ) !== false;
+		$this->setActivationTimestamp( $is_pro );
+	}
+
+	public function setActivationTimestamp( $is_pro = false ) {
+		$key = $is_pro ? 'pro_activation_time' : 'activation_time';
+
+		if ( ! Flags::get( $key ) ) {
+			Flags::set( $key, time() );
+		}
 	}
 }
