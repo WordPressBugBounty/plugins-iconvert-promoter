@@ -22,6 +22,7 @@
     }
 
     tbody {
+      border-radius: 4px;
       tr {
         background-color: #fff;
 
@@ -36,7 +37,7 @@
         td {
           font-size: 13px;
           padding: 5px 10px;
-          color: #454545; 
+          color: #454545;
 
           a.cs-el-edit,
           a.cs-el-delete {
@@ -45,8 +46,6 @@
           }
         }
       }
-
-      border-radius: 4px;
     }
   }
 }

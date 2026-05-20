@@ -3,29 +3,11 @@
 /** Kubio - automatically generated file **/
 
 return array(
-	'button' => array(
-		'classes' => array(
-			'CsPromoButtonBlock'
-		),
-		'rel' => 'button/index.php'
-	),
 	'button-group' => array(
 		'classes' => array(
 			'CsPromoButtonGroupBlock'
 		),
 		'rel' => 'button-group/index.php'
-	),
-	'countdown' => array(
-		'classes' => array(
-			'CountdownBlock'
-		),
-		'rel' => 'countdown/index.php'
-	),
-	'promopopup' => array(
-		'classes' => array(
-			'PromoPopupBlock'
-		),
-		'rel' => 'promopopup/index.php'
 	),
 	'subscribe' => array(
 		'classes' => array(
@@ -33,17 +15,29 @@ return array(
 		),
 		'rel' => 'subscribe/index.php'
 	),
+	'button' => array(
+		'classes' => array(
+			'CsPromoButtonBlock'
+		),
+		'rel' => 'button/index.php'
+	),
+	'countdown' => array(
+		'classes' => array(
+			'CountdownBlock'
+		),
+		'rel' => 'countdown/index.php'
+	),
 	'countdown-item' => array(
 		'classes' => array(
 			'CountDownItemBlock'
 		),
 		'rel' => 'countdown/blocks/countdown-item/index.php'
 	),
-	'yes-no' => array(
+	'promopopup' => array(
 		'classes' => array(
-			'YesNoBlock'
+			'PromoPopupBlock'
 		),
-		'rel' => 'yes-no/index.php'
+		'rel' => 'promopopup/index.php'
 	),
 	'countdown-separator' => array(
 		'classes' => array(
@@ -57,16 +51,22 @@ return array(
 		),
 		'rel' => 'promopopup/blocks/promopopup-close/index.php'
 	),
-	'yes-no-inner' => array(
+	'yes-no' => array(
 		'classes' => array(
-			'YesNoInnerBlock'
+			'YesNoBlock'
 		),
-		'rel' => 'yes-no/blocks/yes-no-inner/index.php'
+		'rel' => 'yes-no/index.php'
 	),
 	'promopopup-overflow-container' => array(
 		'classes' => array(
 			'PromoPopupOverflowBlock'
 		),
 		'rel' => 'promopopup/blocks/promopopup-overflow-container/index.php'
+	),
+	'yes-no-inner' => array(
+		'classes' => array(
+			'YesNoInnerBlock'
+		),
+		'rel' => 'yes-no/blocks/yes-no-inner/index.php'
 	)
 );

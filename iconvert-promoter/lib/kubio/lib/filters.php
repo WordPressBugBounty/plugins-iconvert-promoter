@@ -175,6 +175,7 @@ function kubio_add_flags_to_redirects( $location ) {
 add_filter( 'wp_redirect', __NAMESPACE__ . '\\kubio_add_flags_to_redirects' );
 
 
+
 require_once __DIR__ . '/filters/dismissable-notice.php';
 
 require_once __DIR__ . '/filters/svg-kses.php';

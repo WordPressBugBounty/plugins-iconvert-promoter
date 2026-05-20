@@ -11,14 +11,28 @@ document = {
 			style: [],
 			setAttribute: kubioNoop,
 			attachEvent: kubioNoop,
+			appendChild: kubioNoop,
 		};
 	},
+	createTextNode: kubioNoop,
 	attachEvent: kubioNoop,
 	addEventListener: kubioNoop,
 	querySelectorAll() {
 		return [];
 	},
 };
+const emptyNodeStructure = {
+	addEventListener: kubioNoop,
+	appendChild: kubioNoop,
+	querySelectorAll() {
+		return [];
+	},
+	querySelector() {
+		return null;
+	},
+};
+document.head = emptyNodeStructure;
+document.body = emptyNodeStructure;
 
 // wp imported scripts need to load kubio-style-manager
 // {{{importScriptsPlaceholder}}}

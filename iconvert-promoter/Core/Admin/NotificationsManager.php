@@ -16,9 +16,10 @@ class NotificationsManager {
 	public static function load() {
 		add_action( 'admin_init', array( NotificationsManager::class, 'init' ) );
 		add_action( 'wp_ajax_iconvertpr-dismissable-notice--dismiss', array( NotificationsManager::class, '_dismiss_dismissable_notice' ) );
-		if ( ! wp_next_scheduled( NotificationsManager::class . '::init' ) ) {
-			wp_schedule_event( time(), 'twicedaily', NotificationsManager::class . '::init' );
+		if ( ! wp_next_scheduled( NotificationsManager::class . '::onSchedule' ) ) {
+			wp_schedule_event( time(), 'twicedaily', NotificationsManager::class . '::onSchedule' );
 		}
+		add_action( NotificationsManager::class . '::onSchedule', NotificationsManager::class . '::onSchedule' );
 	}
 
 	/**
@@ -49,6 +50,17 @@ class NotificationsManager {
 		static::displayNotifications( $notifications );
 
 		add_action( 'wp_ajax_iconvertpr-remote-notifications-retrieve', array( NotificationsManager::class, 'updateNotificationsData' ) );
+	}
+
+
+	public static function onSchedule() {
+		// check if we have cached data in transient
+		$notifications = get_transient( static::getTransientKey() );
+
+		if ( $notifications === false || self::isDevMode() ) {
+			// No notifications, try to get them from remote and cache them.
+			static::callNotificationsEndpoint();
+		}
 	}
 
 	/**
@@ -84,7 +96,14 @@ class NotificationsManager {
 	 */
 	public static function updateNotificationsData() {
 		check_ajax_referer( 'iconvertpr-remote-notifications-retrieve-nonce' );
+			$done = static::callNotificationsEndpoint();
+		wp_send_json_success( $done );
+	}
 
+
+
+
+	public static function callNotificationsEndpoint() {
 		$url = add_query_arg(
 			array(
 				'_fields'                  => 'acf,id,modified',
@@ -123,7 +142,7 @@ class NotificationsManager {
 
 		$done = set_transient( static::getTransientKey(), $notifications, DAY_IN_SECONDS );
 
-		wp_send_json_success( $done );
+		return $done;
 	}
 
 	/**

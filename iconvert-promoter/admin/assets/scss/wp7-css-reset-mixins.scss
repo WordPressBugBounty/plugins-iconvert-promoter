@@ -1,0 +1,103 @@
+
+@mixin wp7-buttons-resetter-css {
+  .button  {
+    padding: 0 10px;
+    line-height: 2.15384615;
+    min-height: 30px;
+    font-weight: 400;
+    border-radius: 3px;
+
+    .dashicons:before {
+      line-height: 1;
+    }
+    &.button-hero {
+      font-size: 14px;
+      min-height: 46px;
+      line-height: 3.14285714;
+      padding: 0 36px
+    }
+    &.button-small {
+      min-height: 26px;
+      line-height: 2.18181818;
+      padding: 0 8px;
+      font-size: 11px
+    }
+    &.button-large {
+      min-height: 32px;
+      line-height: 2.30769231;
+      padding: 0 12px;
+    }
+  }
+  .button-link,
+  .button-primary {
+    --wp-admin-theme-color: #2271b1;
+    --wp-admin-theme-color-darker-10: #135e96;
+    font-weight: 400;
+  }
+  .button-primary {
+    padding: 0 10px;
+    min-height: 30px;
+    line-height: 2.15384615;
+  }
+}
+
+@mixin wp7-inputs-resetter-css {
+
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select
+  {
+    min-height: 30px;
+    border-radius: 4px;
+    line-height: 2;
+    padding: 0 8px;
+  }
+
+  input[type=checkbox]:focus,
+  input[type=color]:focus,
+  input[type=date]:focus,
+  input[type=datetime-local]:focus,
+  input[type=datetime]:focus,
+  input[type=email]:focus,
+  input[type=month]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
+  input[type=radio]:focus,
+  input[type=search]:focus,
+  input[type=tel]:focus,
+  input[type=text]:focus,
+  input[type=time]:focus,
+  input[type=url]:focus,
+  input[type=week]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: 2px solid transparent
+  }
+}
+
+@mixin wp7-css-vars-resetter-css {
+  --wp-block-synced-color: #7a00df;
+  --wp-block-synced-color--rgb: 122, 0, 223;
+  --wp-bound-block-color: var(--wp-block-synced-color);
+  --wp-editor-canvas-background: #ddd;
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color--rgb: 0, 124, 186;
+  --wp-admin-theme-color-darker-10: #006ba1;
+  --wp-admin-theme-color-darker-10--rgb: 0, 107, 161;
+  --wp-admin-theme-color-darker-20: #005a87;
+  --wp-admin-theme-color-darker-20--rgb: 0, 90, 135;
+
+}

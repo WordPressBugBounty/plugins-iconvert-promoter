@@ -3,7 +3,7 @@
 /**
  * Plugin Name: iConvert Promoter
  * Description: A powerful and dynamic WordPress popup toolkit to grow your email list, retain customers, and boost conversions.
- * Version: 1.0.3
+ * Version: 1.1.0
  * Author: ExtendThemes
  * Text Domain: iconvert-promoter
  * License: GPL-3.0+
@@ -59,7 +59,7 @@ if ( defined( 'ICONVERTPR_VERSION' ) ) {
 	return;
 }
 
-define('ICONVERTPR_VERSION', '1.0.3');
+define('ICONVERTPR_VERSION', '1.1.0');
 
 
 $GLOBALS['iconvertpr_autoloader'] = require_once __DIR__ . '/vendor/autoload.php';
@@ -67,7 +67,7 @@ $GLOBALS['iconvertpr_autoloader'] = require_once __DIR__ . '/vendor/autoload.php
 define('ICONVERTPR_PATH', plugin_dir_path(__FILE__));
 define('ICONVERTPR_URL', plugin_dir_url(__FILE__));
 define('ICONVERTPR_PAGE_FILE', __FILE__);
-define('ICONVERTPR_BUILD_NUMBER', '36' );
+define('ICONVERTPR_BUILD_NUMBER', '38' );
 
 define('ICONVERTPR_PAGE_ID', 'iconvertpr-promoter');
 define('ICONVERTPR_PAGE_SUBSCRIBERS', 'iconvertpr-promoter-subscribers');

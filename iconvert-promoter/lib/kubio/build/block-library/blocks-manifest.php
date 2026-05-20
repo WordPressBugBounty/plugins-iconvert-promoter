@@ -3,29 +3,17 @@
 /** Kubio - automatically generated file **/
 
 return array(
-	'button' => array(
-		'classes' => array(
-			'ButtonBlock'
-		),
-		'rel' => 'button/index.php'
-	),
 	'button-group' => array(
 		'classes' => array(
 			'ButtonGroupBlock'
 		),
 		'rel' => 'button-group/index.php'
 	),
-	'column' => array(
+	'button' => array(
 		'classes' => array(
-			'ColumnBlock'
+			'ButtonBlock'
 		),
-		'rel' => 'column/index.php'
-	),
-	'image' => array(
-		'classes' => array(
-			'ImageBlock'
-		),
-		'rel' => 'image/index.php'
+		'rel' => 'button/index.php'
 	),
 	'divider' => array(
 		'classes' => array(
@@ -33,17 +21,17 @@ return array(
 		),
 		'rel' => 'divider/index.php'
 	),
-	'link' => array(
+	'column' => array(
 		'classes' => array(
-			'LinkBlock'
+			'ColumnBlock'
 		),
-		'rel' => 'link/index.php'
+		'rel' => 'column/index.php'
 	),
-	'link-group' => array(
+	'heading' => array(
 		'classes' => array(
-			'LinkGroupBlock'
+			'HeadingBlock'
 		),
-		'rel' => 'link-group/index.php'
+		'rel' => 'heading/index.php'
 	),
 	'icon' => array(
 		'classes' => array(
@@ -51,11 +39,29 @@ return array(
 		),
 		'rel' => 'icon/index.php'
 	),
-	'heading' => array(
+	'image' => array(
 		'classes' => array(
-			'HeadingBlock'
+			'ImageBlock'
 		),
-		'rel' => 'heading/index.php'
+		'rel' => 'image/index.php'
+	),
+	'link-group' => array(
+		'classes' => array(
+			'LinkGroupBlock'
+		),
+		'rel' => 'link-group/index.php'
+	),
+	'link' => array(
+		'classes' => array(
+			'LinkBlock'
+		),
+		'rel' => 'link/index.php'
+	),
+	'row' => array(
+		'classes' => array(
+			'RowBlock'
+		),
+		'rel' => 'row/index.php'
 	),
 	'shortcode' => array(
 		'classes' => array(
@@ -70,29 +76,17 @@ return array(
 		),
 		'rel' => 'social-icons/index.php'
 	),
-	'row' => array(
-		'classes' => array(
-			'RowBlock'
-		),
-		'rel' => 'row/index.php'
-	),
-	'spacer' => array(
-		'classes' => array(
-			'SpacerBlock'
-		),
-		'rel' => 'spacer/index.php'
-	),
 	'text' => array(
 		'classes' => array(
 			'TextBlock'
 		),
 		'rel' => 'text/index.php'
 	),
-	'video' => array(
+	'spacer' => array(
 		'classes' => array(
-			'VideoBlock'
+			'SpacerBlock'
 		),
-		'rel' => 'video/index.php'
+		'rel' => 'spacer/index.php'
 	),
 	'icon-list-item' => array(
 		'classes' => array(
@@ -105,5 +99,11 @@ return array(
 			'IconListBlock'
 		),
 		'rel' => 'icon-list/blocks/icon-list/index.php'
+	),
+	'video' => array(
+		'classes' => array(
+			'VideoBlock'
+		),
+		'rel' => 'video/index.php'
 	)
 );

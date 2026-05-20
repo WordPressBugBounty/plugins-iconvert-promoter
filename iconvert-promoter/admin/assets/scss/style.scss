@@ -64,8 +64,11 @@ $primary-lightest: lighten($primary, 38%);
   text-align: center;
   vertical-align: middle;
 
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   background: var(--background-color, transparent) !important;
   color: var(--text-color, $dark) !important;
@@ -1423,6 +1426,7 @@ body[class*="admin_page_iconvertpr"] {
 
                   .subsection {
                     border-left: 1px solid $main-border;
+                    color: $dark;
 
                     @include mediaQueryUpTo(821px) {
                       padding-bottom: 30px;
@@ -1455,8 +1459,6 @@ body[class*="admin_page_iconvertpr"] {
                         margin-top: 15px;
                       }
                     }
-
-                    color: $dark;
 
                     .title-subsection {
                       font-size: 12px;
@@ -2174,6 +2176,17 @@ body[class*="admin_page_iconvertpr"] {
   }
 }
 
+body:not(.admin-color-fresh)
+  #adminmenu
+  li.menu-top.toplevel_page_iconvertpr-promoter {
+  .wp-menu-image {
+    img {
+      transition: none !important;
+      opacity: 1;
+      filter: unset;
+    }
+  }
+}
 @-webkit-keyframes validation_fail_pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 rgba($danger, 0.4);
@@ -2211,6 +2224,7 @@ body[class*="admin_page_iconvertpr"] {
 @import "integrations/integrations-page";
 @import "./license-page";
 @import "./upgrade-page";
+@import "./wp7-css-reset-mixins";
 
 .icp-promo-available-in-pro-template {
   display: flex;
@@ -2231,3 +2245,22 @@ body[class*="admin_page_iconvertpr"] {
     margin-top: 0.5rem;
   }
 }
+
+/** wp7.0 fixes start*/
+:where(.promoter-notice.notice),
+:where(.ic-promo-wrapper) {
+  @include wp7-css-vars-resetter-css;
+  @include wp7-inputs-resetter-css;
+}
+
+.wp-core-ui {
+  :where(.promoter-notice.notice),
+  :where(.ic-promo-wrapper) {
+    @include wp7-buttons-resetter-css;
+  }
+}
+.promoter-notice.notice {
+  background: white;
+}
+
+/*end*/
